@@ -1,3 +1,4 @@
+import 'package:demodom/screens/news_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:demodom/screens/home_screen.dart';
 
@@ -11,8 +12,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.teal,
+        fontFamily: "Cereal",
       ),
-      home: HomeScreen(title: 'Flutter Demo'),
+      home: NewsScreen(),
     );
   }
 }
