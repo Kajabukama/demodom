@@ -1,3 +1,4 @@
-# resources 
- https://flatuicolors.com
-  
+
+# resources
+
+ <https://flatuicolors.com>
