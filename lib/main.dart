@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.teal,
         fontFamily: "Cereal",
       ),
-      home: NewsScreen(),
+      home: HomeScreen(),
     );
   }
 }

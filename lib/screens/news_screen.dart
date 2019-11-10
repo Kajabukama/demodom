@@ -12,7 +12,7 @@ class NewsScreen extends StatefulWidget {
 
 class _NewsScreenState extends State<NewsScreen> {
   String uri =
-      "https://newsapi.org/v2/everything?q=bitcoin&from=2019-10-06&sortBy=publishedAt&apiKey=4282d0b762a34765a73cc43ffb68c4eb";
+      "https://newsapi.org/v2/everything?q=bitcoin&from=2019-10-10&sortBy=publishedAt&apiKey=4282d0b762a34765a73cc43ffb68c4eb";
 
   @override
   void initState() {

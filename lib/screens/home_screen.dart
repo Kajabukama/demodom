@@ -1,6 +1,7 @@
 import 'package:demodom/models/users_model.dart';
 import 'package:demodom/screens/contact_screen.dart';
 import 'package:demodom/screens/news_screen.dart';
+import 'package:demodom/screens/posts_screen.dart';
 import 'package:demodom/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
@@ -46,7 +47,7 @@ class HomeScreen extends StatelessWidget {
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (_) => NewsScreen(),
+                builder: (_) => PostScreen(),
               ),
             ),
             icon: Icon(Icons.more_vert),

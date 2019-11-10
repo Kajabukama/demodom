@@ -1,6 +1,6 @@
 import 'dart:convert';
-
 import 'package:demodom/models/post_model.dart';
+import 'package:demodom/screens/PostDetail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:http/http.dart' as http;
@@ -46,7 +46,11 @@ class _PostScreenState extends State<PostScreen> {
       appBar: AppBar(
         actions: <Widget>[
           IconButton(
-            onPressed: () => print("pressed"),
+            onPressed: () {
+              setState(() {
+                _fetchPosts();
+              });
+            },
             iconSize: 20.0,
             icon: Icon(Feather.getIconData("home")),
           )
@@ -62,7 +66,16 @@ class _PostScreenState extends State<PostScreen> {
               itemBuilder: (BuildContext context, index) {
                 final posts = listPosts[index];
                 return ListTile(
-                  onTap: () => print("select item"),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => PostDetails(
+                          post: posts,
+                        ),
+                      ),
+                    );
+                  },
                   title: Text(
                     posts.title,
                     style: TextStyle(
