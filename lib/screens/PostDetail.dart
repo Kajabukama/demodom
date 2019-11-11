@@ -15,7 +15,7 @@ class PostDetails extends StatefulWidget {
 class _PostDetailsState extends State<PostDetails> {
   String url = "https://jsonplaceholder.typicode.com/posts";
   bool isloading = false;
-  Map<String, dynamic> details;
+  var postObject;
 
   _fetchById(id) async {
     setState(() {
@@ -24,8 +24,8 @@ class _PostDetailsState extends State<PostDetails> {
 
     final response = await http.get(url + "/" + id.toString());
     if (response.statusCode == 200) {
-      details = json.decode(response.body);
-      print(details);
+      postObject = json.decode(response.body);
+      print(postObject);
       setState(() {
         isloading = false;
       });
@@ -44,14 +44,16 @@ class _PostDetailsState extends State<PostDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(details['title']),
+        title: Text(widget.post.title),
       ),
       body: isloading
           ? Center(
-              child: CircularProgressIndicator(),
+              child: CircularProgressIndicator(
+                backgroundColor: Colors.black12,
+              ),
             )
           : Center(
-              child: Text(details['body']),
+              child: Text(postObject['body']),
             ),
     );
   }

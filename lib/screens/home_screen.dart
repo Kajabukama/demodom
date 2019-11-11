@@ -1,6 +1,6 @@
 import 'package:demodom/models/users_model.dart';
-import 'package:demodom/screens/contact_screen.dart';
-import 'package:demodom/screens/news_screen.dart';
+import 'package:demodom/screens/create_post_screen.dart';
+// import 'package:demodom/screens/news_screen.dart';
 import 'package:demodom/screens/posts_screen.dart';
 import 'package:demodom/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (_) => ContactScreen(),
+                builder: (_) => CreatePostScreen(),
               ),
             );
           },
